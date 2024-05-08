@@ -81,13 +81,7 @@ class UserViewSet(viewsets.ViewSet, generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     parser_classes = [MultiPartParser]
-    swagger_schema =None
 
-    def get_permissions(self):
-        if self.action.__eq__('current_user'):
-            return [permissions.IsAuthenticated]
-
-        return [permissions.AllowAny]
 
     #user/current_user/
     @action(methods=['get'], url_name='current', detail=False)

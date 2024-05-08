@@ -42,6 +42,15 @@ class StudentAdmin(admin.ModelAdmin):
     search_fields = ["username", "school_year", "major__name"]
 
 
+class CouncilMembershipInlineAdmin(admin.StackedInline):
+    model = CouncilMembership
+    fk_name = 'council'
+
+
+class CouncilAdmin(admin.ModelAdmin):
+    inlines = [CouncilMembershipInlineAdmin]
+
+
 class UserAdmin(admin.ModelAdmin):
     list_display = ["username", "email" ]
 
@@ -51,8 +60,7 @@ admin_site = ThesisAppAdminSite(name= 'myadmin')
 admin_site.register(Student, StudentAdmin)
 admin_site.register(Major)
 admin_site.register(Department)
-admin_site.register(Council)
-admin_site.register(CouncilMembership)
+admin_site.register(Council,CouncilAdmin)
 admin_site.register(Thesis, ThesisAdmin)
 admin_site.register(Score)
 admin_site.register(User)

@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3191ab7-3d0d-4eb4-8856-b174c1542df2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/thesisapp/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thesisapp/theses/dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thesisapp/theses/paginator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thesisapp/theses/perms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thesisapp/theses/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thesisapp/theses/templates/admin/stats_view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thesisapp/theses/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Nhom5_DeTai10_CCNLTHD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Nhom5_DeTai10_CCNLTHD.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thesisapp/theses/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/thesisapp/theses/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thesisapp/theses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/thesisapp/theses/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Nhom5_DeTai10_CCNLTHD\" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
