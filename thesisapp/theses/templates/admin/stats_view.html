@@ -1,0 +1,53 @@
+{% extends 'admin/base_site.html' %}
+{%block content%}
+<h1>THỐNG KÊ KHÓA LUẬN TỐT NGHIỆP</h1>
+<ul>
+    {%for i in stats%}
+    <li>
+        <strong>{{i.name}}: {{i.count}} </strong>
+    </li>
+    {%endfor%}
+</ul>
+
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    let values = [];
+    let labels = [];
+    {%for i in stats%}
+        values.push({{i.count}})
+        labels.push('{{i.name}}')
+    {%endfor%}
+    window.onload = ()=>{
+      const ctx = document.getElementById('myChart');
+
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Category Count',
+            data: values,
+            borderWidth: 1,
+            backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(54, 162, 235)',
+              'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+</script>
+{% endblock %}
