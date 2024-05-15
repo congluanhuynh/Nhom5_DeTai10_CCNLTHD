@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3191ab7-3d0d-4eb4-8856-b174c1542df2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Nhom5_DeTai10_CCNLTHD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Nhom5_DeTai10_CCNLTHD.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thesisapp/theses/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/thesisapp/theses/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thesisapp/theses/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thesisapp/theses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/thesisapp/theses/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thesisapp/theses/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/thesisapp/theses/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thesisapp/theses/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/thesisapp/theses/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thesisapp/theses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/thesisapp/theses/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thesisapp/thesisapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/thesisapp/thesisapp/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

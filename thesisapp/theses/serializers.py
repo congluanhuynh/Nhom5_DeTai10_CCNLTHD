@@ -1,6 +1,6 @@
 from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
-from .models import Thesis, Major, Department, Student, User, Score
+from .models import Thesis, Major, Department, Student, User, Score, Council, CouncilMembership, InterviewSchedule
 
 
 class BaseSerializer(ModelSerializer):
@@ -34,10 +34,28 @@ class ThesisSerializer(ModelSerializer):
         fields = ["id", "name", "created_date", "major"]
 
 
+class InterviewScheduleSerializer(ModelSerializer):
+    class Meta:
+        model = InterviewSchedule
+        fields = ["council","thesis","date", "time","location"]
+
+
 class StudentSerializer(ModelSerializer):
     class Meta:
         model = Student
         fields = ["username", "first_name", "last_name", "school_year", "major"]
+
+
+class CouncilSerializer(ModelSerializer):
+    class Meta:
+        model = Council
+        fields = ["name", "department", "members"]
+
+
+class CouncilMembershipSerializer(ModelSerializer):
+    class Meta:
+        model = CouncilMembership
+        fields = ["user","council", "role"]
 
 
 class UserSerializer(ModelSerializer):

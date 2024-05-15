@@ -39,7 +39,6 @@ class Student(models.Model):
     first_name = models.CharField(max_length=50, null=False)
     last_name = models.CharField(max_length=50, null=False)
     username = models.CharField(max_length=10, null=False, unique=True)
-    phone_num = models.CharField(max_length=10)
     school_year = models.IntegerField()
     major = models.ForeignKey(Major, on_delete=models.CASCADE)
 
@@ -75,6 +74,17 @@ class Thesis(BaseModel):
         return self.name
 
 
+class InterviewSchedule(models.Model):
+    council = models.ForeignKey(Council, on_delete=models.CASCADE, related_name='council')
+    thesis = models.ForeignKey(Thesis, on_delete=models.CASCADE, related_name='thesis')
+    date = models.DateField()
+    time = models.TimeField()
+    location = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"Lịch bảo vệ khóa luận {self.thesis.name}"
+
+
 class Interaction(BaseModel):
     user = models.ForeignKey(User, on_delete=models.RESTRICT, null=False)
     council = models.ForeignKey(Council, on_delete=models.RESTRICT, null=False)
@@ -89,7 +99,10 @@ class Comment(Interaction):
 
 
 class Score(Interaction):
-    score_value = models.SmallIntegerField(default=0)
+    score_value = models.FloatField(default=0)
+
+    def __str__(self):
+        return f"{self.council.name} {self.user.username} {self.score_value}"
 
 
 

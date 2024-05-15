@@ -114,6 +114,8 @@ cloudinary.config(
     api_secret="7CTwHu9KwMIXcG3ED3UoDdyZ7Tg"
 )
 
+import cloudinary.uploader
+import cloudinary.api
 
 
 # Password validation

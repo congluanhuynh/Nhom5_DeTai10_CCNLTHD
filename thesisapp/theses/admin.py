@@ -3,7 +3,7 @@ from django.template.response import TemplateResponse
 from django.urls import path
 from . import dao
 
-from .models import Major, Department, Thesis, Student, Score, User, Council, CouncilMembership
+from .models import Major, Department, Thesis, Student, Score, User, Council, CouncilMembership, InterviewSchedule
 from django.contrib.auth.models import Permission, ContentType, Group
 
 
@@ -51,8 +51,18 @@ class CouncilAdmin(admin.ModelAdmin):
     inlines = [CouncilMembershipInlineAdmin]
 
 
+class InterviewScheduleAdmin(admin.ModelAdmin):
+    list_display = ["thesis", "time", "date", "location"]
+    list_filter = ["thesis", "time", "date", "location"]
+
+
 class UserAdmin(admin.ModelAdmin):
-    list_display = ["username", "email" ]
+    list_display = ["id", "username", "email" ]
+
+
+class ScoreAdmin(admin.ModelAdmin):
+    list_display = ["thesis", "user", "council", "score_value"]
+    list_filter = ["thesis","council"]
 
 
 # Register your models here.
@@ -62,8 +72,9 @@ admin_site.register(Major)
 admin_site.register(Department)
 admin_site.register(Council,CouncilAdmin)
 admin_site.register(Thesis, ThesisAdmin)
-admin_site.register(Score)
-admin_site.register(User)
+admin_site.register(InterviewSchedule, InterviewScheduleAdmin)
+admin_site.register(Score, ScoreAdmin)
+admin_site.register(User, UserAdmin)
 admin_site.register(Permission)
 admin_site.register(Group)
 admin_site.register(ContentType)
